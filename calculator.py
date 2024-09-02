@@ -1,3 +1,6 @@
+# Тестовое задание
+# Консольный калькулятор
+#
 lst = input().split()
 if len(lst) > 3:
     raise ValueError("Too many values to unpack")
