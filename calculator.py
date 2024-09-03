@@ -1,7 +1,7 @@
 # Тестовое задание
 # Консольный калькулятор
 #
-def main(input: str):
+def main(input: str) -> str:
     lst = input.split()
     if len(lst) > 3:
         raise ValueError("Too many values to unpack")
@@ -16,12 +16,12 @@ def main(input: str):
     if 1 <= a <= 10 and 1 <= b <= 10:
         match sign:
             case "+":
-                return a + b
+                return str(a + b)
             case "-":
-                return a - b
+                return str(a - b)
             case "*":
-                return a * b
+                return str(a * b)
             case "/":
-                return a // b
+                return str(a // b)
     else:
         raise ValueError("Invalid a or b for value [1, 10]")
