@@ -1,10 +1,9 @@
-def update_order(new_item, current_order=[]):
-    current_order.append(new_item)
-    return current_order
+def my_func(collection, n):
+    for i in range(1, n + 1):
+        collection.append(i)
+    return collection
 
 
-order1 = update_order({"item": "burger", "cost": 103.5})
-
-order2 = update_order({"item": "soda", "cost": 51.5})
-
-print(order2)
+a = [10, 20, 30]
+my_func(a, 3)
+print(a)
