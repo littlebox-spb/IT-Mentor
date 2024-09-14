@@ -1,9 +1,16 @@
-def my_func(collection, n):
-    for i in range(1, n + 1):
-        collection.append(i)
-    return collection
+lst_in = [
+    "ustanovka-i-zapusk-yazyka",
+    "ustanovka-i-poryadok-raboty-pycharm",
+    "peremennyye-operator-prisvaivaniya-tipy-dannykh",
+    "arifmeticheskiye-operatsii",
+    "ustanovka-i-poryadok-raboty-pycharm",
+]
 
 
-a = [10, 20, 30]
-my_func(a, 3)
-print(a)
+d = {}
+for url in lst_in:
+    if url in d:
+        print(f"Взято из кэша: HTML-страница для адреса {url}")
+    else:
+        d[url] = url
+        print(f"HTML-страница для адреса {url}")
