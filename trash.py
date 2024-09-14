@@ -1,16 +1,25 @@
-lst_in = [
-    "ustanovka-i-zapusk-yazyka",
-    "ustanovka-i-poryadok-raboty-pycharm",
-    "peremennyye-operator-prisvaivaniya-tipy-dannykh",
-    "arifmeticheskiye-operatsii",
-    "ustanovka-i-poryadok-raboty-pycharm",
-]
-
-
-d = {}
-for url in lst_in:
-    if url in d:
-        print(f"Взято из кэша: HTML-страница для адреса {url}")
-    else:
-        d[url] = url
-        print(f"HTML-страница для адреса {url}")
+things = {
+    "карандаш": 20,
+    "зеркальце": 100,
+    "зонт": 500,
+    "рубашка": 300,
+    "брюки": 1000,
+    "бумага": 200,
+    "молоток": 600,
+    "пила": 400,
+    "удочка": 1200,
+    "расческа": 40,
+    "котелок": 820,
+    "палатка": 5240,
+    "брезент": 2130,
+    "спички": 10,
+}
+d = dict([[v, k] for k, v in things.items()])
+k = sorted(d)
+w = int(input()) * 1000
+while w > 0 and k:
+    s = k.pop()
+    if s > w:
+        continue
+    w -= s
+    print(d[s], end=" ")
