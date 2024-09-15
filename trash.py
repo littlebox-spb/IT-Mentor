@@ -1,25 +1,10 @@
-things = {
-    "карандаш": 20,
-    "зеркальце": 100,
-    "зонт": 500,
-    "рубашка": 300,
-    "брюки": 1000,
-    "бумага": 200,
-    "молоток": 600,
-    "пила": 400,
-    "удочка": 1200,
-    "расческа": 40,
-    "котелок": 820,
-    "палатка": 5240,
-    "брезент": 2130,
-    "спички": 10,
-}
-d = dict([[v, k] for k, v in things.items()])
-k = sorted(d)
-w = int(input()) * 1000
-while w > 0 and k:
-    s = k.pop()
-    if s > w:
-        continue
-    w -= s
-    print(d[s], end=" ")
+def print_goods(*args):
+    lst = []
+    for t in args:
+        if type(t) == str:
+            lst.append(t)
+    for i, v in enumerate(lst):
+        print(f"{i+1}. {v}")
+
+
+print_goods(*list("abc"), 1, "hello")
